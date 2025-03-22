@@ -13,20 +13,22 @@ public class GameManager : MonoBehaviour
     private int nbHealtyCells = 0;
     private const string CANCER_CELL_TAG = "CancerCell";
     private const string HEALTY_CELL_TAG = "HealtyCell";
+
+    private int currentLevel;
     
     void Start()
+    {
+        currentLevel = 1;
+        StartWave();
+    }
+    
+    private void StartWave()
     {
         nbCancerCells = GetRandomSpawnCount();
         SpawnObj(cancerCell, nbCancerCells);
 
         nbHealtyCells = GetRandomSpawnCount();
         SpawnObj(healtyCell, nbHealtyCells);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private int GetRandomSpawnCount()
@@ -89,5 +91,12 @@ public class GameManager : MonoBehaviour
         {
             Destroy(obj);
         }
+
+        currentLevel++;
+
+        if(currentLevel < 6)
+            StartWave();
+
+        // else go back to hospital scene
     }
 }
