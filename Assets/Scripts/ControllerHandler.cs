@@ -21,7 +21,28 @@ public class RayScript : MonoBehaviour
         if(OVRInput.GetDown(shootingButton))
         {
             FireProjectile();
+
+            OVRHaptics.OVRHapticsChannel channel = OVRHaptics.LeftChannel; 
+            
+            if(shootingButton.ToString().Contains("RHandTrigger"))
+                channel = OVRHaptics.RightChannel;
+
+            PlayHapticFeedback(channel);
         }
+    }
+    private void PlayHapticFeedback(OVRHaptics.OVRHapticsChannel channel)
+    {
+        // Create a short haptic clip
+        OVRHapticsClip hapticClip = new OVRHapticsClip();
+
+        // Fill the clip with vibration data
+        for (int i = 0; i < 200; i++) // Duration: ~0.06 seconds (320 samples per second)
+        {
+            hapticClip.WriteSample(255); // Maximum strength
+        }
+
+        // Play the haptic clip on the specified channel
+        channel.Preempt(hapticClip);
     }
 
      public void FireProjectile()
