@@ -11068,8 +11068,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonClickActions:
-  - Title: 
-    Button: 1
+  - Title: Right Controller
+    Button: 24577
     ButtonMode: 1
     Callback:
       m_PersistentCalls:

@@ -18,12 +18,13 @@ public class ControllerButton : MonoBehaviour
         source.PlayOneShot(shootingAudioClip);
 
         Ray ray = new Ray(shootingPoint.position, shootingPoint.forward);
-        bool hasHit = Physics.Raycast(ray, out RaycastHit hit, maxLineDistance, layerMask);
+        bool hitTarget = Physics.Raycast(ray, out RaycastHit hit, maxLineDistance, layerMask);
 
-        Vector3 endPoint = Vector3.zero;
-        if(hasHit)
+        Vector3 endPoint;
+        if(hitTarget)
         {
             endPoint = hit.point;
+            Destroy(hit.collider.gameObject, 0.5f);
         }
 
         else
