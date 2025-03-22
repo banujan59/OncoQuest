@@ -9,26 +9,35 @@ public class GameManager : MonoBehaviour
     public float spawnDistance = 5f; // Distance in front of the camera
     public float randomRange = 4f; // Range of random offset
 
-    private int nbCancerCells = 0;
-    private int nbHealtyCells = 0;
+    private Vector3 _spawnCameraPosition;
+    private Vector3 _spawnCameraForward;
+
+    private int _nbCancerCells = 0;
+    private int _nbHealtyCells = 0;
     private const string CANCER_CELL_TAG = "CancerCell";
     private const string HEALTY_CELL_TAG = "HealtyCell";
+
 
     private int currentLevel;
     
     void Start()
     {
+        // Get the camera's position and forward direction. This will be saved to respawn
+        Transform cameraTransform = Camera.main.transform;
+        _spawnCameraPosition = cameraTransform.position;
+        _spawnCameraForward = cameraTransform.forward;
+
         currentLevel = 1;
         StartWave();
     }
     
     private void StartWave()
     {
-        nbCancerCells = GetRandomSpawnCount();
-        SpawnObj(cancerCell, nbCancerCells);
+        _nbCancerCells = GetRandomSpawnCount();
+        SpawnObj(cancerCell, _nbCancerCells);
 
-        nbHealtyCells = GetRandomSpawnCount();
-        SpawnObj(healtyCell, nbHealtyCells);
+        _nbHealtyCells = GetRandomSpawnCount();
+        SpawnObj(healtyCell, _nbHealtyCells);
     }
 
     private int GetRandomSpawnCount()
@@ -38,13 +47,10 @@ public class GameManager : MonoBehaviour
 
     private void SpawnObj(GameObject objToSpawn, int count)
     {
-        // Get the camera's position and forward direction
-        Transform cameraTransform = Camera.main.transform;
-
         for(int i = 0 ; i < count ; i++)
         {
             // Calculate the position in front of the camera
-            Vector3 spawnPosition = cameraTransform.position + cameraTransform.forward * spawnDistance;
+            Vector3 spawnPosition = _spawnCameraPosition + _spawnCameraForward * spawnDistance;
 
             // Apply a random offset within the specified range
             spawnPosition += new Vector3(
@@ -68,17 +74,17 @@ public class GameManager : MonoBehaviour
 
         if(objectTag == CANCER_CELL_TAG)
         {
-            nbCancerCells--;
+            _nbCancerCells--;
         }
 
         else if(objectTag == HEALTY_CELL_TAG)
         {
-            nbHealtyCells--;
+            _nbHealtyCells--;
         }
 
         Destroy(cellToDestroy);
 
-        if(nbCancerCells == 0)
+        if(_nbCancerCells == 0)
             EndWave();
     }
 
