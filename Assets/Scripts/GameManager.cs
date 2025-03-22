@@ -8,12 +8,19 @@ public class GameManager : MonoBehaviour
     public GameObject healtyCell;
     public float spawnDistance = 5f; // Distance in front of the camera
     public float randomRange = 4f; // Range of random offset
-    
 
+    private int nbCancerCells = 0;
+    private int nbHealtyCells = 0;
+    private const string CANCER_CELL_TAG = "CancerCell";
+    private const string HEALTY_CELL_TAG = "HealtyCell";
+    
     void Start()
     {
-        SpawnObj(cancerCell, GetRandomSpawnCount());
-        SpawnObj(healtyCell, GetRandomSpawnCount());
+        nbCancerCells = GetRandomSpawnCount();
+        SpawnObj(cancerCell, nbCancerCells);
+
+        nbHealtyCells = GetRandomSpawnCount();
+        SpawnObj(healtyCell, nbHealtyCells);
     }
 
     // Update is called once per frame
@@ -57,16 +64,30 @@ public class GameManager : MonoBehaviour
     {
         string objectTag = cellToDestroy.tag;
 
-        if(objectTag == "CancerCell")
+        if(objectTag == CANCER_CELL_TAG)
         {
-            Debug.Log("Cancer cell destroyed!");
+            nbCancerCells--;
         }
 
-        else if(objectTag == "HealtyCell")
+        else if(objectTag == HEALTY_CELL_TAG)
         {
-            Debug.Log("Healty cell destroyed!");
+            nbHealtyCells--;
         }
 
         Destroy(cellToDestroy);
+
+        if(nbCancerCells == 0)
+            EndWave();
+    }
+
+    private void EndWave()
+    {
+        GameObject[] remainingCells = GameObject.FindGameObjectsWithTag(HEALTY_CELL_TAG);
+
+        // Print the names of the found objects
+        foreach (GameObject obj in remainingCells)
+        {
+            Destroy(obj);
+        }
     }
 }
