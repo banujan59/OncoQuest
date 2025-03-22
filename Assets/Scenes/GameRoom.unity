@@ -14950,12 +14950,13 @@ MonoBehaviour:
   linePrefab: {fileID: 3133800729330366936, guid: 938601f56befed140bb46d1799a29206,
     type: 3}
   shootingPoint: {fileID: 880312980}
-  maxLineDistance: 5
+  maxLineDistance: 7
   lineShowTimer: 0.3
   shootingAudioClip: {fileID: 8300000, guid: 3f5757954868b154592e542beefe0b81, type: 3}
   layerMask:
     serializedVersion: 2
     m_Bits: 1
+  gameManager: {fileID: 1877119778}
 --- !u!1 &1493189327
 GameObject:
   m_ObjectHideFlags: 0
@@ -16982,12 +16983,13 @@ MonoBehaviour:
   linePrefab: {fileID: 3133800729330366936, guid: 938601f56befed140bb46d1799a29206,
     type: 3}
   shootingPoint: {fileID: 1771584297}
-  maxLineDistance: 5
+  maxLineDistance: 7
   lineShowTimer: 0.3
   shootingAudioClip: {fileID: 8300000, guid: 3f5757954868b154592e542beefe0b81, type: 3}
   layerMask:
     serializedVersion: 2
     m_Bits: 1
+  gameManager: {fileID: 1877119778}
 --- !u!1 &1782057229
 GameObject:
   m_ObjectHideFlags: 0
