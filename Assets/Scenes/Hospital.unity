@@ -532,7 +532,7 @@ GameObject:
   - component: {fileID: 38807907}
   - component: {fileID: 38807906}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: RoomCeiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1774,7 +1774,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8cbd460392921445cac1752cc667846f,
         type: 3}
       propertyPath: m_Name
-      value: IV Pole
+      value: Pole
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2017,7 +2017,7 @@ GameObject:
   - component: {fileID: 229246588}
   - component: {fileID: 229246587}
   m_Layer: 0
-  m_Name: Cube (8)
+  m_Name: Picture3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2197,7 +2197,7 @@ GameObject:
   - component: {fileID: 234367599}
   - component: {fileID: 234367598}
   m_Layer: 0
-  m_Name: Directional Light (2)
+  m_Name: Ceiling Light13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3573,7 +3573,7 @@ GameObject:
   - component: {fileID: 349295269}
   - component: {fileID: 349295268}
   m_Layer: 0
-  m_Name: floor
+  m_Name: RoomFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3940,7 +3940,7 @@ GameObject:
   - component: {fileID: 387461854}
   - component: {fileID: 387461853}
   m_Layer: 0
-  m_Name: Cube (6)
+  m_Name: Picture1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4177,7 +4177,7 @@ GameObject:
   - component: {fileID: 410087040}
   - component: {fileID: 410087042}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: Ceiling Light1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6417,7 +6417,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 61cd9f34b56bc42b2bf197f1376d6ce6,
         type: 3}
       propertyPath: m_Name
-      value: BED ASSEST_2
+      value: Bed
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6434,7 +6434,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5bb3f8a9fa8f5fc4c984867835a018b6, type: 3}
       propertyPath: m_Name
-      value: Coffee_Table_Books
+      value: Books
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5bb3f8a9fa8f5fc4c984867835a018b6, type: 3}
       propertyPath: m_LocalScale.x
@@ -6789,7 +6789,7 @@ PrefabInstance:
     - target: {fileID: 8994928122896932435, guid: d2fdb08bf4ada3a468116aa81d86bba8,
         type: 3}
       propertyPath: m_Name
-      value: SM_frame_01 (1)
+      value: Frame3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7516,7 +7516,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 16de22d71aac07c4e8827211e6a16176, type: 3}
       propertyPath: m_Name
-      value: TallLamp (1)
+      value: TallLampByTheBed
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 16de22d71aac07c4e8827211e6a16176, type: 3}
       propertyPath: m_LocalScale.x
@@ -9403,7 +9403,7 @@ GameObject:
   - component: {fileID: 806018622}
   - component: {fileID: 806018626}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: RoomWall4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10667,7 +10667,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 35d558844c6d4bd4099115e71679ca77, type: 3}
       propertyPath: m_Name
-      value: Sofa.1
+      value: Sofa
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 35d558844c6d4bd4099115e71679ca77, type: 3}
       propertyPath: m_LocalScale.x
@@ -11698,7 +11698,7 @@ GameObject:
   - component: {fileID: 995149452}
   - component: {fileID: 995149451}
   m_Layer: 0
-  m_Name: Cube (7)
+  m_Name: Picture2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12323,7 +12323,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: b9ad5a30f6ddfb04ead4a475b2911054, type: 3}
       propertyPath: m_Name
-      value: Curtain_240x140
+      value: Curtain1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b9ad5a30f6ddfb04ead4a475b2911054, type: 3}
       propertyPath: m_LocalScale.x
@@ -12551,7 +12551,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 105ca7b34db8541b6876c56f200adf05,
         type: 3}
       propertyPath: m_Name
-      value: HospitalsingleDoorfinal
+      value: Door
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13222,7 +13222,7 @@ GameObject:
   - component: {fileID: 1131774644}
   - component: {fileID: 1131774643}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Rug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13917,7 +13917,7 @@ PrefabInstance:
     - target: {fileID: 8994928122896932435, guid: d2fdb08bf4ada3a468116aa81d86bba8,
         type: 3}
       propertyPath: m_Name
-      value: SM_frame_01 (2)
+      value: Frame1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14089,7 +14089,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100004, guid: e0bf51c05a4e17e47b94306301d09d5e, type: 3}
       propertyPath: m_Name
-      value: Plant_Potted_Monstera_Deliciosa
+      value: PlottedPlant
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: e0bf51c05a4e17e47b94306301d09d5e, type: 3}
       propertyPath: m_LocalScale.x
@@ -15223,7 +15223,7 @@ GameObject:
   - component: {fileID: 1273359111}
   - component: {fileID: 1273359110}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: RoomWall1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16408,7 +16408,7 @@ GameObject:
   - component: {fileID: 1335626722}
   - component: {fileID: 1335626721}
   m_Layer: 0
-  m_Name: Directional Light (1)
+  m_Name: Ceiling Light2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16710,7 +16710,7 @@ GameObject:
   - component: {fileID: 1362853709}
   - component: {fileID: 1362853708}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: RoomWall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17137,7 +17137,7 @@ GameObject:
   - component: {fileID: 1386434401}
   - component: {fileID: 1386434400}
   m_Layer: 0
-  m_Name: Cube (5)
+  m_Name: RoomWall3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18861,7 +18861,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: b9ad5a30f6ddfb04ead4a475b2911054, type: 3}
       propertyPath: m_Name
-      value: Curtain_240x140 (1)
+      value: Curtain2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b9ad5a30f6ddfb04ead4a475b2911054, type: 3}
       propertyPath: m_LocalScale.x
@@ -22218,7 +22218,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 18e8f2e1faf424e45b447fbb9f657077, type: 3}
       propertyPath: m_Name
-      value: Decorative_Throw_Pillow
+      value: Pillow
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 18e8f2e1faf424e45b447fbb9f657077, type: 3}
       propertyPath: m_LocalScale.x
@@ -23038,7 +23038,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 3bdea860a477bd143b38a234a5d4b2c9, type: 3}
       propertyPath: m_Name
-      value: Succulent_Planter_Ceramic
+      value: TablePlant
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3bdea860a477bd143b38a234a5d4b2c9, type: 3}
       propertyPath: m_LocalScale.x
@@ -24088,7 +24088,7 @@ PrefabInstance:
     - target: {fileID: 8994928122896932435, guid: d2fdb08bf4ada3a468116aa81d86bba8,
         type: 3}
       propertyPath: m_Name
-      value: SM_frame_01
+      value: Frame2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24219,15 +24219,15 @@ SceneRoots:
   - {fileID: 939116258}
   - {fileID: 20545648}
   - {fileID: 1131774646}
-  - {fileID: 2130663568}
   - {fileID: 1184714539}
+  - {fileID: 2130663568}
   - {fileID: 614620632}
   - {fileID: 387461856}
   - {fileID: 995149454}
+  - {fileID: 229246590}
   - {fileID: 1068449505}
   - {fileID: 1051748092}
   - {fileID: 1547222654}
-  - {fileID: 229246590}
   - {fileID: 567540622}
   - {fileID: 204690818}
   - {fileID: 1968999091}
