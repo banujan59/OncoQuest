@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public GameObject cancerCell;
     public GameObject healtyCell;
     public float spawnDistance = 5f; // Distance in front of the camera
-    public float randomRange = 3f; // Range of random offset
+    public float randomRange = 4f; // Range of random offset
     
 
     void Start()
@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
 
             // Apply a random offset within the specified range
             spawnPosition += new Vector3(
-                Random.Range(-1.0f, randomRange), // Random X offset
+                Random.Range(-randomRange, randomRange), // Random X offset
                 Random.Range(-1.0f, randomRange), // Random Y offset
                 0f // Keep the random offset on the Z-axis minimal
             );
