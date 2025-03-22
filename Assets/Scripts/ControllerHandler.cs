@@ -34,7 +34,7 @@ public class RayScript : MonoBehaviour
         if(hitTarget)
         {
             endPoint = hit.point;
-            Destroy(hit.collider.gameObject, 0.5f);
+            Destroy(hit.collider.gameObject);
         }
 
         else
