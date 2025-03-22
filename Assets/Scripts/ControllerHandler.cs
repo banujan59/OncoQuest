@@ -13,6 +13,7 @@ public class RayScript : MonoBehaviour
 
     public AudioClip shootingAudioClip;
     public LayerMask layerMask;
+    public GameManager gameManager;
 
     // Update is called once per frame
     void Update()
@@ -34,7 +35,11 @@ public class RayScript : MonoBehaviour
         if(hitTarget)
         {
             endPoint = hit.point;
-            Destroy(hit.collider.gameObject);
+
+            if(gameManager != null)
+                gameManager.HandleObjectDestroyed(hit.collider.gameObject);
+            else
+                Destroy(hit.collider.gameObject);
         }
 
         else

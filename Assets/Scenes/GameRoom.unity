@@ -14956,6 +14956,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1
+  gameManager: {fileID: 1877119778}
 --- !u!1 &1493189327
 GameObject:
   m_ObjectHideFlags: 0
@@ -16988,6 +16989,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1
+  gameManager: {fileID: 1877119778}
 --- !u!1 &1782057229
 GameObject:
   m_ObjectHideFlags: 0

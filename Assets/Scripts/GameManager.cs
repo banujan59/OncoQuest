@@ -52,4 +52,21 @@ public class GameManager : MonoBehaviour
             spawnedObject.transform.localScale = new Vector3(randomScale, randomScale, randomScale);
         }
     }
+
+    public void HandleObjectDestroyed(GameObject cellToDestroy)
+    {
+        string objectTag = cellToDestroy.tag;
+
+        if(objectTag == "CancerCell")
+        {
+            Debug.Log("Cancer cell destroyed!");
+        }
+
+        else if(objectTag == "HealtyCell")
+        {
+            Debug.Log("Healty cell destroyed!");
+        }
+
+        Destroy(cellToDestroy);
+    }
 }
