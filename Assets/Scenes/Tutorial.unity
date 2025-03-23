@@ -19208,8 +19208,8 @@ MonoBehaviour:
   audioSource: {fileID: 611192399}
   audioClips:
   - {fileID: 8300000, guid: ec85b4aa0692e4dbc914e649ec8b1198, type: 3}
-  - {fileID: 8300000, guid: 921171f14c09f4dda8f4e3d42c75bd52, type: 3}
-  - {fileID: 8300000, guid: 03ae2b7f6cca047f8b714f27dbc2e6fd, type: 3}
+  - {fileID: 8300000, guid: 0d55f76b47ef4ab4998ff6e879e5196f, type: 3}
+  - {fileID: 8300000, guid: 090cbd02c5c542844bb7dafea8d074b3, type: 3}
   - {fileID: 8300000, guid: 33be16f1aacd04ddbb8619456f9b6ee5, type: 3}
 --- !u!4 &1781743525
 Transform:
