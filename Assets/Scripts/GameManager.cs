@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public LevelLoader levelLoader;
     public GameObject cancerCell;
     public GameObject healtyCell;
     public float spawnDistance = 5f; // Distance in front of the camera
@@ -18,7 +19,7 @@ public class GameManager : MonoBehaviour
     private const string HEALTY_CELL_TAG = "HealtyCell";
 
 
-    private int currentLevel;
+    private int _currentWave;
     
     void Start()
     {
@@ -27,7 +28,7 @@ public class GameManager : MonoBehaviour
         _spawnCameraPosition = cameraTransform.position;
         _spawnCameraForward = cameraTransform.forward;
 
-        currentLevel = 1;
+        _currentWave = 1;
         StartWave();
     }
     
@@ -59,9 +60,23 @@ public class GameManager : MonoBehaviour
                 0f // Keep the random offset on the Z-axis minimal
             );
 
-            // Spawn the object at the calculated position and with no rotation
-            GameObject spawnedObject = Instantiate(objToSpawn, spawnPosition, Quaternion.identity);
-        
+            // Rotate the position around the camera's origin to move it to the right side
+            float rotationAngle = 0.0f; // Rotation angle in degrees to move to the right
+
+            if(_currentWave >= 2)
+            {
+                List<float> possibleRotations = new List<float> {0.0f, -45.0f, 45.0f};
+                int randomIndex = Random.Range(0, possibleRotations.Count);
+                rotationAngle = possibleRotations[randomIndex];
+            }
+
+            Quaternion rotationAroundCamera = Quaternion.Euler(0, rotationAngle, 0);
+            spawnPosition = Camera.main.transform.position + (rotationAroundCamera * (spawnPosition - Camera.main.transform.position));
+
+            // Spawn the object at the calculated position and make it face the camera
+            Quaternion rotationToFaceCamera = Quaternion.LookRotation(Camera.main.transform.position - spawnPosition);
+            GameObject spawnedObject = Instantiate(objToSpawn, spawnPosition, rotationToFaceCamera);
+
             // Assign a random scale to the spawned object
             float randomScale = Random.Range(0.2f, 0.5f); // Random scale value between 0.2 and 0.5
             spawnedObject.transform.localScale = new Vector3(randomScale, randomScale, randomScale);
@@ -98,11 +113,12 @@ public class GameManager : MonoBehaviour
             Destroy(obj);
         }
 
-        currentLevel++;
+        _currentWave++;
 
-        if(currentLevel < 6)
+        if(_currentWave < 4)
             StartWave();
 
-        // else go back to hospital scene
+        else
+            levelLoader.LoadNextScene();
     }
 }
