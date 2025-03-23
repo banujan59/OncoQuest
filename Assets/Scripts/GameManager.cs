@@ -119,6 +119,6 @@ public class GameManager : MonoBehaviour
             StartWave();
 
         else
-            levelLoader.LoadFirstScene();
+            levelLoader.LoadNextScene();
     }
 }

@@ -9,9 +9,4 @@ public class LevelLoader : MonoBehaviour
         int currentSceneIdx = currentScene.buildIndex;
         SceneManager.LoadScene(currentSceneIdx+1);
     }
-
-    public void LoadFirstScene()
-    {
-        SceneManager.LoadScene(0);
-    }
 }
