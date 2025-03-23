@@ -44,7 +44,7 @@ public class TutorialScript : MonoBehaviour
         _currentSpawnedObj = Instantiate(objToSpawn, spawnPosition, Quaternion.identity);
         _currentSpawnedObj.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
 
-        Invoke("DestroySpawnedObj", 5.0f);
+        Invoke("DestroySpawnedObj", 10.0f);
     }
 
     private void DestroySpawnedObj()
