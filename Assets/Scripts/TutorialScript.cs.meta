@@ -3,7 +3,17 @@ guid: 66a24e385ed5aca4192dda2e331d2372
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - levelLoader: {instanceID: 0}
+  - cancerCell: {fileID: 2904926803479654825, guid: d68714604a79dc6459f7eee1d3a0235e,
+      type: 3}
+  - healtyCell: {fileID: 140491399839037325, guid: 795b4d33399f7b74a82f7d4a432c48c5,
+      type: 3}
+  - source: {instanceID: 0}
+  - shootingAudioClipWBC: {fileID: 8300000, guid: 921171f14c09f4dda8f4e3d42c75bd52,
+      type: 3}
+  - shootingAudioClipCWBC: {fileID: 8300000, guid: 33be16f1aacd04ddbb8619456f9b6ee5,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

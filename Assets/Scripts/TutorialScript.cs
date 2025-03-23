@@ -14,6 +14,12 @@ public class TutorialScript : MonoBehaviour
     private GameObject _currentSpawnedObj;
 
     private int spawnedObjIdx = 0;
+
+    // UPDATE on audio
+    public AudioSource source;
+    public AudioClip shootingAudioClipWBC;
+    public AudioClip shootingAudioClipCWBC;
+
     
     void Start()
     {
