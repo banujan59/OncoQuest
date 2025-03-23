@@ -62,6 +62,14 @@ public class GameManager : MonoBehaviour
 
             // Rotate the position around the camera's origin to move it to the right side
             float rotationAngle = 0.0f; // Rotation angle in degrees to move to the right
+
+            if(_currentWave >= 2)
+            {
+                List<float> possibleRotations = new List<float> {0.0f, -45.0f, 45.0f};
+                int randomIndex = Random.Range(0, possibleRotations.Count);
+                rotationAngle = possibleRotations[randomIndex];
+            }
+
             Quaternion rotationAroundCamera = Quaternion.Euler(0, rotationAngle, 0);
             spawnPosition = Camera.main.transform.position + (rotationAroundCamera * (spawnPosition - Camera.main.transform.position));
 
@@ -107,7 +115,7 @@ public class GameManager : MonoBehaviour
 
         _currentWave++;
 
-        if(_currentWave < 6)
+        if(_currentWave < 4)
             StartWave();
 
         else
