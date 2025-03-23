@@ -3,7 +3,13 @@ guid: ed462c6120111ee49bac6e780fa1e0dc
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - levelLoader: {instanceID: 0}
+  - cancerCell: {instanceID: 0}
+  - healtyCell: {instanceID: 0}
+  - audioSource: {instanceID: 0}
+  - firstWBCClip1: {fileID: 8300000, guid: b76675b0a9e7c4f4d94d76d1f8551453, type: 3}
+  - firstWBCClip2: {fileID: 8300000, guid: 9216fd0e416cc4620ba182563b63206b, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
