@@ -11858,9 +11858,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelLoader: {fileID: 1877119780}
-  cancerCell: {fileID: 6322053627342224548, guid: 638caa6aaf00a49feac09f29773339b7,
+  cancerCell: {fileID: 2904926803479654825, guid: d68714604a79dc6459f7eee1d3a0235e,
     type: 3}
-  healtyCell: {fileID: 9041305855239928150, guid: 76b82a4634a4441398cc75e972957471,
+  healtyCell: {fileID: 140491399839037325, guid: 795b4d33399f7b74a82f7d4a432c48c5,
     type: 3}
   spawnDistance: 5
   randomRange: 2
