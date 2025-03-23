@@ -19206,17 +19206,11 @@ MonoBehaviour:
   healthyCell: {fileID: 7844583245016644718, guid: 42946e6c9a5558b4cb6b4bc335cfcc41,
     type: 3}
   audioSource: {fileID: 611192399}
-  roomEntryClip: {fileID: 8300000, guid: ec85b4aa0692e4dbc914e649ec8b1198, type: 3}
-  wbcClip: {fileID: 8300000, guid: 921171f14c09f4dda8f4e3d42c75bd52, type: 3}
-  pickupClip: {fileID: 8300000, guid: 03ae2b7f6cca047f8b714f27dbc2e6fd, type: 3}
-  cwbcClip: {fileID: 8300000, guid: 33be16f1aacd04ddbb8619456f9b6ee5, type: 3}
-  wrapUpClip: {fileID: 8300000, guid: 4b5594bf8e22b4e5b8b677a60964ca67, type: 3}
   audioClips:
   - {fileID: 8300000, guid: ec85b4aa0692e4dbc914e649ec8b1198, type: 3}
   - {fileID: 8300000, guid: 921171f14c09f4dda8f4e3d42c75bd52, type: 3}
   - {fileID: 8300000, guid: 03ae2b7f6cca047f8b714f27dbc2e6fd, type: 3}
   - {fileID: 8300000, guid: 33be16f1aacd04ddbb8619456f9b6ee5, type: 3}
-  - {fileID: 8300000, guid: 4b5594bf8e22b4e5b8b677a60964ca67, type: 3}
 --- !u!4 &1781743525
 Transform:
   m_ObjectHideFlags: 0

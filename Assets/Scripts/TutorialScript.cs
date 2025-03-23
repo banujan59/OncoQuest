@@ -51,7 +51,8 @@ public class TutorialScript : MonoBehaviour
 
         else
         {
-            levelLoader.LoadNextScene();
+            SpanMultipleWIthOffset();
+            Invoke("LoadNextLevel", 5.0f);
         }
     }
 
@@ -63,8 +64,36 @@ public class TutorialScript : MonoBehaviour
         _currentSpawnedObj.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
     }
 
+    private void SpanMultipleWIthOffset()
+    {
+        const float spawnDistance = 0.5f;
+
+        Vector3 spawnPosition = _spawnCameraPosition + _spawnCameraForward * spawnDistance;
+        spawnPosition += new Vector3(
+                -0.4f,
+                0f,
+                0f // Keep the random offset on the Z-axis minimal
+            );
+        GameObject go = Instantiate(cancerCell, spawnPosition, Quaternion.identity);
+        go.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+
+        spawnPosition = _spawnCameraPosition + _spawnCameraForward * spawnDistance;
+        spawnPosition += new Vector3(
+                0.4f, 
+                0f,
+                0f // Keep the random offset on the Z-axis minimal
+            );
+        go = Instantiate(cancerCell, spawnPosition, Quaternion.identity);
+        go.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+    }
+
     private void DestroySpawnedObj()
     {
         Destroy(_currentSpawnedObj);
+    }
+
+    private void LoadNextLevel()
+    {
+        levelLoader.LoadNextScene();
     }
 }
