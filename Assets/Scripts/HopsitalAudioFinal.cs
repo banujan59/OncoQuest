@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class HopsitalAudioFinal : MonoBehaviour
 {
-    public LevelLoader levelLoader;
     public AudioSource source;
     public AudioClip congrats;
 
@@ -12,6 +11,5 @@ public class HopsitalAudioFinal : MonoBehaviour
     void Start()
     {
         source.PlayOneShot(congrats);
-        Invoke("OnTimerElapsed", 3.0f);
     }
 }
