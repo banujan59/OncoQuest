@@ -10148,6 +10148,8 @@ MonoBehaviour:
   source: {fileID: 871863901}
   linePrefab: {fileID: 3133800729330366936, guid: 938601f56befed140bb46d1799a29206,
     type: 3}
+  laserImpactPrefab: {fileID: 3607216934765789609, guid: dd5b6fae725924e4bb89365043360b77,
+    type: 3}
   shootingPoint: {fileID: 880312980}
   maxLineDistance: 7
   lineShowTimer: 0.3
@@ -11387,6 +11389,8 @@ MonoBehaviour:
   shootingButton: 805306624
   source: {fileID: 871863901}
   linePrefab: {fileID: 3133800729330366936, guid: 938601f56befed140bb46d1799a29206,
+    type: 3}
+  laserImpactPrefab: {fileID: 3607216934765789609, guid: dd5b6fae725924e4bb89365043360b77,
     type: 3}
   shootingPoint: {fileID: 1771584297}
   maxLineDistance: 7

@@ -9,8 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Hospital.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/Room1.unity
+    path: Assets/Scenes/Tutorial.unity
     guid: 196359ba00ef33445bb36c4e13c2fd46
+  - enabled: 1
+    path: Assets/Scenes/PassthroughScene.unity
+    guid: 07728137defff9b448b37bb0edab0dd0
   - enabled: 1
     path: Assets/Scenes/GameRoom.unity
     guid: 9980423f2a20c244896a74ec4af05f23
