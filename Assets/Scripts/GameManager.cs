@@ -40,9 +40,9 @@ public class GameManager : MonoBehaviour
     
     private void StartWave()
     {
-        if (_currentWave <= waveStartClips.Length)
+        if (_currentWave == 1)
         {
-            audioSource.PlayOneShot(waveStartClips[_currentWave - 1]);
+            audioSource.PlayOneShot(waveStartClips[0]);
         }
 
         _nbCancerCells = GetRandomSpawnCount();

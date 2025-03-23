@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07267155, g: 0.06455204, b: 0.042172845, a: 1}
+  m_IndirectSpecularColor: {r: 0.07267167, g: 0.064552106, b: 0.042172816, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12120,10 +12120,11 @@ MonoBehaviour:
     type: 3}
   spawnDistance: 5
   randomRange: 2
-  audioSource: {fileID: 0}
-  waveStartClips: []
-  firstWBCClip1: {fileID: 0}
-  firstWBCClip2: {fileID: 0}
+  audioSource: {fileID: 1130528346}
+  waveStartClips:
+  - {fileID: 8300000, guid: 950b9a44fba124b088ed5e7b80b190ae, type: 3}
+  firstWBCClip1: {fileID: 8300000, guid: b76675b0a9e7c4f4d94d76d1f8551453, type: 3}
+  firstWBCClip2: {fileID: 8300000, guid: 9216fd0e416cc4620ba182563b63206b, type: 3}
 --- !u!4 &1877119779
 Transform:
   m_ObjectHideFlags: 0
