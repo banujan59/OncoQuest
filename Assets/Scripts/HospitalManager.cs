@@ -11,11 +11,16 @@ public class HospitalManager : MonoBehaviour
     
     void Start()
     {
-        //source.PlayOneShot(shootingAudioClip);
-        Invoke("OnTimerElapsed", 5.0f);
+        Invoke("StartPlayingAudio", 3.0f);
     }
 
-    void OnTimerElapsed()
+    private void StartPlayingAudio()
+    {
+        source.PlayOneShot(shootingAudioClip);
+        Invoke("OnTimerElapsed", shootingAudioClip.length);
+    }
+
+    private void OnTimerElapsed()
     {
         if(levelLoader != null)
             levelLoader.LoadNextScene();

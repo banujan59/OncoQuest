@@ -19203,11 +19203,14 @@ MonoBehaviour:
   levelLoader: {fileID: 1781743526}
   cancerCell: {fileID: 6606163906860717449, guid: 9b35f99df6cf7924a8aa2d90d5fa11eb,
     type: 3}
-  healtyCell: {fileID: 7844583245016644718, guid: 42946e6c9a5558b4cb6b4bc335cfcc41,
+  healthyCell: {fileID: 7844583245016644718, guid: 42946e6c9a5558b4cb6b4bc335cfcc41,
     type: 3}
-  source: {fileID: 0}
-  shootingAudioClipWBC: {fileID: 0}
-  shootingAudioClipCWBC: {fileID: 0}
+  audioSource: {fileID: 611192399}
+  audioClips:
+  - {fileID: 8300000, guid: ec85b4aa0692e4dbc914e649ec8b1198, type: 3}
+  - {fileID: 8300000, guid: 0d55f76b47ef4ab4998ff6e879e5196f, type: 3}
+  - {fileID: 8300000, guid: 090cbd02c5c542844bb7dafea8d074b3, type: 3}
+  - {fileID: 8300000, guid: 33be16f1aacd04ddbb8619456f9b6ee5, type: 3}
 --- !u!4 &1781743525
 Transform:
   m_ObjectHideFlags: 0

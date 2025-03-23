@@ -6666,7 +6666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelLoader: {fileID: 590890935}
   source: {fileID: 1858408497}
-  shootingAudioClip: {fileID: 0}
+  shootingAudioClip: {fileID: 8300000, guid: 0796d7a74164f4513ad0d71b08b30d53, type: 3}
 --- !u!114 &590890935
 MonoBehaviour:
   m_ObjectHideFlags: 0

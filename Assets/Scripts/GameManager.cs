@@ -18,9 +18,15 @@ public class GameManager : MonoBehaviour
     private const string CANCER_CELL_TAG = "CancerCell";
     private const string HEALTY_CELL_TAG = "HealtyCell";
 
-
     private int _currentWave;
-    
+
+    public AudioSource audioSource;
+    public AudioClip[] waveStartClips; 
+    public AudioClip firstWBCClip1;    
+    public AudioClip firstWBCClip2;   
+
+    private bool _firstWBCHit = false;
+
     void Start()
     {
         // Get the camera's position and forward direction. This will be saved to respawn
@@ -34,6 +40,11 @@ public class GameManager : MonoBehaviour
     
     private void StartWave()
     {
+        if (_currentWave == 1)
+        {
+            audioSource.PlayOneShot(waveStartClips[0]);
+        }
+
         _nbCancerCells = GetRandomSpawnCount();
         SpawnObj(cancerCell, _nbCancerCells);
 
@@ -87,13 +98,23 @@ public class GameManager : MonoBehaviour
     {
         string objectTag = cellToDestroy.tag;
 
+
         if(objectTag == CANCER_CELL_TAG)
         {
             _nbCancerCells--;
         }
 
-        else if(objectTag == HEALTY_CELL_TAG)
+        else if (objectTag == HEALTY_CELL_TAG)
         {
+            // Handle the first WBC hit if it's not already handled
+            if (!_firstWBCHit)
+            {
+                _firstWBCHit = true;
+                // Play two audio clips in sequence
+                audioSource.PlayOneShot(firstWBCClip1);
+                Invoke("PlaySecondWBCClip", firstWBCClip1.length); // Wait for the first clip to finish
+            }
+
             _nbHealtyCells--;
         }
 
@@ -101,6 +122,11 @@ public class GameManager : MonoBehaviour
 
         if(_nbCancerCells == 0)
             EndWave();
+    }
+
+    private void PlaySecondWBCClip()
+    {
+        audioSource.PlayOneShot(firstWBCClip2);
     }
 
     private void EndWave()
