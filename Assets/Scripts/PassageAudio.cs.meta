@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c0821f9aede204b1f92f04cc035868ef
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - levelLoader: {instanceID: 0}
+  - audioSource: {instanceID: 0}
+  - roomEntryClip: {fileID: 8300000, guid: 4b5594bf8e22b4e5b8b677a60964ca67, type: 3}
+  - wbcClip: {fileID: 8300000, guid: 4e0902d1994494a90908cb882f8fc635, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
