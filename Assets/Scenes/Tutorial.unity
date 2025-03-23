@@ -18849,6 +18849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66a24e385ed5aca4192dda2e331d2372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelLoader: {fileID: 1781743526}
   cancerCell: {fileID: 6606163906860717449, guid: 9b35f99df6cf7924a8aa2d90d5fa11eb,
     type: 3}
   healtyCell: {fileID: 7844583245016644718, guid: 42946e6c9a5558b4cb6b4bc335cfcc41,

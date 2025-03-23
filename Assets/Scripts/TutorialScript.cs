@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TutorialScript : MonoBehaviour
 {
+    public LevelLoader levelLoader;
     public GameObject cancerCell;
     public GameObject healtyCell;
 
@@ -48,7 +49,8 @@ public class TutorialScript : MonoBehaviour
         if( spawnedObjIdx < 2)
             SpanObject(cancerCell);
 
-        // else go next scene
+        else
+            levelLoader.LoadNextScene();
 
     }
 }
