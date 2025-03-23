@@ -7,6 +7,7 @@ public class RayScript : MonoBehaviour
     public OVRInput.RawButton shootingButton;
     public AudioSource source;
     public LineRenderer linePrefab;
+    public GameObject laserImpactPrefab;
     public Transform shootingPoint;
     public float maxLineDistance = 5;
     public float lineShowTimer = 0.3f;
@@ -56,6 +57,10 @@ public class RayScript : MonoBehaviour
         if(hitTarget)
         {
             endPoint = hit.point;
+
+            Quaternion laserImpactRotation = Quaternion.LookRotation(-hit.normal);
+            GameObject laserImpact = Instantiate(laserImpactPrefab, hit.point, laserImpactRotation);
+            Destroy(laserImpact, 0.25f);
 
             if(gameManager != null)
                 gameManager.HandleObjectDestroyed(hit.collider.gameObject);
