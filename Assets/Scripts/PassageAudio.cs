@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PassageAudio : MonoBehaviour
 {
-    public LevelLoader levelLoader;
-
     public AudioSource audioSource;
     public AudioClip roomEntryClip;
     public AudioClip wbcClip;
@@ -24,11 +22,5 @@ public class PassageAudio : MonoBehaviour
     void PlayWBCClip()
     {
         audioSource.PlayOneShot(wbcClip);
-        Invoke("LoadNextScene", wbcClip.length); 
-    }
-
-    void LoadNextScene()
-    {
-        levelLoader.LoadNextScene();
     }
 }
