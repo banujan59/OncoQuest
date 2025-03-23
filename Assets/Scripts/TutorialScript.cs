@@ -13,15 +13,11 @@ public class TutorialScript : MonoBehaviour
 
     private GameObject _currentSpawnedObj;
 
-    private int spawnedObjIdx = 0;
-
     // UPDATE on audio
     public AudioSource audioSource;
-    public AudioClip roomEntryClip;
-    public AudioClip wbcClip;
-    public AudioClip pickupClip;
-    public AudioClip cwbcClip;
-    public AudioClip wrapUpClip; // NEW: Final wrap-up audio before transition
+
+    public AudioClip[] audioClips; 
+    private int _currentClipIndex = 0;
 
     void Start()
     {
@@ -29,69 +25,46 @@ public class TutorialScript : MonoBehaviour
         Transform cameraTransform = Camera.main.transform;
         _spawnCameraPosition = cameraTransform.position + new Vector3(0f, 1.0f, 0f);
         _spawnCameraForward = cameraTransform.forward;
-
-        // Play entry audio when entering the room
-        if (audioSource != null && roomEntryClip != null)
-            audioSource.PlayOneShot(roomEntryClip);
-
-        Invoke("PlayWBCClip", 3.0f); // Schedule WBC explanation
-
-        SpanObject(healthyCell, wbcClip);
+        PlayNextClip();
     }
 
-    private void PlayWBCClip()
+    void PlayNextClip()
     {
-        if (audioSource != null && wbcClip != null)
-            audioSource.PlayOneShot(wbcClip);
+        if (_currentClipIndex < audioClips.Length)
+        {
+            if(_currentClipIndex == 1)
+            {
+                SpanObject(healthyCell);
+            }
 
-        Invoke("PlayPickupClip", 3.0f); // Schedule pickup explanation
+            else if(_currentClipIndex == 3)
+            {
+                DestroySpawnedObj();
+                SpanObject(cancerCell);
+            }
+
+            audioSource.clip = audioClips[_currentClipIndex];
+            audioSource.Play();
+            Invoke("PlayNextClip", audioSource.clip.length);
+            _currentClipIndex++;
+        }
+
+        else
+        {
+            levelLoader.LoadNextScene();
+        }
     }
 
-    private void PlayPickupClip()
-    {
-        if (audioSource != null && pickupClip != null)
-            audioSource.PlayOneShot(pickupClip);
-    }
-
-    private void SpanObject(GameObject objToSpawn, AudioClip audioClip)
+    private void SpanObject(GameObject objToSpawn)
     {
         const float spawnDistance = 0.5f;
         Vector3 spawnPosition = _spawnCameraPosition + _spawnCameraForward * spawnDistance;
         _currentSpawnedObj = Instantiate(objToSpawn, spawnPosition, Quaternion.identity);
         _currentSpawnedObj.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
-
-        if (audioSource != null && audioClip != null)
-            audioSource.PlayOneShot(audioClip);
-
-        Invoke("DestroySpawnedObj", 5.0f);
     }
 
     private void DestroySpawnedObj()
     {
         Destroy(_currentSpawnedObj);
-        spawnedObjIdx++;
-
-        if (spawnedObjIdx < 2)
-        {
-            SpanObject(cancerCell, cwbcClip);
-        }
-        else
-        {
-            // Play wrap-up clip before transitioning
-            if (audioSource != null && wrapUpClip != null)
-            {
-                audioSource.PlayOneShot(wrapUpClip);
-                Invoke("LoadNextScene", wrapUpClip.length); // Wait for wrap-up to finish
-            }
-            else
-            {
-                LoadNextScene(); // Fallback if no audio
-            }
-        }
-    }
-
-    private void LoadNextScene()
-    {
-        levelLoader.LoadNextScene();
     }
 }
