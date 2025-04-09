@@ -11,7 +11,8 @@ public class HospitalManager : MonoBehaviour
     
     void Start()
     {
-        Invoke("StartPlayingAudio", 3.0f);
+        //Invoke("StartPlayingAudio", 3.0f);
+        Invoke("OnTimerElapsed", 3.0f);
     }
 
     private void StartPlayingAudio()

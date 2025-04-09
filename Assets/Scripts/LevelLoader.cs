@@ -4,6 +4,17 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
+    private FadeScreen _fadeScreen = null;
+
+    void Start()
+    {
+        GameObject fadePanel = GameObject.FindWithTag("FadeScreenPanel");
+        if(fadePanel != null)
+        {
+            _fadeScreen =  fadePanel.GetComponent<FadeScreen>();
+        }
+    }
+
     public void LoadNextScene()
     {
         Scene currentScene = SceneManager.GetActiveScene();
@@ -13,11 +24,20 @@ public class LevelLoader : MonoBehaviour
 
     private IEnumerator LoadSceneRoutine(int sceneIndex)
     {
+        float fadeDuration = 0.0f;
+        if(_fadeScreen != null)
+        {
+            _fadeScreen.FadeOut();
+            fadeDuration = _fadeScreen.fadeDuration;
+        }
+
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
         operation.allowSceneActivation = false;
 
-        while(operation.progress < 0.9f)
+        float timer = 0.0f;
+        while(timer <= fadeDuration || operation.progress < 0.9f)
         {
+            timer += Time.deltaTime;
             yield return null;
         }
 
