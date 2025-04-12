@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+// Script to move the blood cells in the game
 public class MoveScript : MonoBehaviour
 {
     public float intensity = 0.00005f; // Intensity of vibration
