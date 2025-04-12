@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PassageAudio : MonoBehaviour
@@ -12,28 +11,66 @@ public class PassageAudio : MonoBehaviour
 
     void Start()
     {
-        PlayAudioAndSpawn();
+        StartCoroutine(AudioPlayerCoroutine());
     }
 
     void Update()
     {
+        UpdateAudio();
+
         bool isControllerInput = (OVRInput.GetConnectedControllers() & OVRInput.Controller.RTouch) == OVRInput.Controller.RTouch ||
         (OVRInput.GetConnectedControllers() & OVRInput.Controller.LTouch) == OVRInput.Controller.LTouch;
         
-        if(isControllerInput && OVRInput.GetDown(goToNextLevelButton) && isControllerInput)
+        if(isControllerInput && OVRInput.GetDown(goToNextLevelButton))
         {
             levelLoader.LoadNextScene();
         }
     }
-
-    void PlayAudioAndSpawn()
+    private void UpdateAudio()
     {
-        audioSource.PlayOneShot(roomEntryClip);
-        Invoke("PlayWBCClip", roomEntryClip.length); 
+        if (OVRPlugin.userPresent)
+        {
+            if (!audioSource.isPlaying)
+            {
+                audioSource.UnPause();
+            }
+        }
+        else // Pause the audio if the user is not present
+        {
+            if (audioSource.isPlaying)
+            {
+                audioSource.Pause();
+            }
+        }
     }
 
-    void PlayWBCClip()
+    private IEnumerator AudioPlayerCoroutine()
     {
-        audioSource.PlayOneShot(wbcClip);
+        audioSource.clip = roomEntryClip;
+        audioSource.Play();
+        yield return new WaitForSecondsRealtime(roomEntryClip.length);
+
+        // Wait for the user to wear the headset if necessary
+        while (!OVRPlugin.userPresent)
+        {
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(5.0f);
+
+        while (true)
+        {
+            audioSource.clip = wbcClip;
+            audioSource.Play();
+            yield return new WaitForSecondsRealtime(wbcClip.length);
+
+            // Wait for the user to wear the headset if necessary
+            while (!OVRPlugin.userPresent)
+            {
+                yield return null;
+            }
+
+            yield return new WaitForSeconds(5.0f);
+        }
     }
 }
