@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     private int _currentWave;
 
-    public AudioSource audioSource;
+    public AudioPlayer audioPlayer;
     public AudioClip[] waveStartClips; 
     public AudioClip firstWBCClip1;    
     public AudioClip firstWBCClip2;   
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
     {
         if (_currentWave == 1)
         {
-            audioSource.PlayOneShot(waveStartClips[0]);
+            StartCoroutine(audioPlayer.PlayAudio(waveStartClips[0]));
         }
 
         _nbCancerCells = GetRandomSpawnCount();
@@ -111,8 +111,7 @@ public class GameManager : MonoBehaviour
             {
                 _firstWBCHit = true;
                 // Play two audio clips in sequence
-                audioSource.PlayOneShot(firstWBCClip1);
-                Invoke("PlaySecondWBCClip", firstWBCClip1.length); // Wait for the first clip to finish
+                StartCoroutine(audioPlayer.PlayAudio(new List<AudioClip> {firstWBCClip1, firstWBCClip2}, 0.0f));
             }
 
             _nbHealtyCells--;
@@ -122,11 +121,6 @@ public class GameManager : MonoBehaviour
 
         if(_nbCancerCells == 0)
             EndWave();
-    }
-
-    private void PlaySecondWBCClip()
-    {
-        audioSource.PlayOneShot(firstWBCClip2);
     }
 
     private void EndWave()

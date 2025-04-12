@@ -4,26 +4,20 @@ using UnityEngine;
 
 public class HospitalManager : MonoBehaviour
 {
+    public AudioPlayer audioPlayer;
     public LevelLoader levelLoader;
-    public AudioSource source;
-    public AudioClip shootingAudioClip;
-
+    public AudioClip introClip;
     
     void Start()
     {
-        //Invoke("StartPlayingAudio", 3.0f);
-        Invoke("OnTimerElapsed", 3.0f);
+        StartCoroutine(PlayAudioForScene());
     }
 
-    private void StartPlayingAudio()
+    private IEnumerator PlayAudioForScene()
     {
-        source.PlayOneShot(shootingAudioClip);
-        Invoke("OnTimerElapsed", shootingAudioClip.length);
-    }
-
-    private void OnTimerElapsed()
-    {
-        if(levelLoader != null)
-            levelLoader.LoadNextScene();
+        yield return new WaitForSeconds(3.0f); 
+        yield return audioPlayer.PlayAudio(introClip);
+        yield return new WaitForSeconds(2.0f); 
+        levelLoader.LoadNextScene();
     }
 }

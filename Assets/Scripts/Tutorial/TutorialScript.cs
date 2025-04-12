@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TutorialScript : MonoBehaviour
 {
+    public AudioPlayer audioPlayer;
     public LevelLoader levelLoader;
     public GameObject cancerCell;
     public GameObject healthyCell;
@@ -13,11 +14,7 @@ public class TutorialScript : MonoBehaviour
 
     private GameObject _currentSpawnedObj;
 
-    // UPDATE on audio
-    public AudioSource audioSource;
-
     public AudioClip[] audioClips; 
-    private int _currentClipIndex = 0;
 
     void Start()
     {
@@ -25,35 +22,31 @@ public class TutorialScript : MonoBehaviour
         Transform cameraTransform = Camera.main.transform;
         _spawnCameraPosition = cameraTransform.position + new Vector3(0f, 1.0f, 0f);
         _spawnCameraForward = cameraTransform.forward;
-        PlayNextClip();
+
+        StartCoroutine(PlayAudioForScene());
     }
 
-    void PlayNextClip()
+    private IEnumerator PlayAudioForScene()
     {
-        if (_currentClipIndex < audioClips.Length)
+        for(int currentClipIndex = 0 ; currentClipIndex < audioClips.Length ; currentClipIndex++)
         {
-            if(_currentClipIndex == 1)
+            if(currentClipIndex == 1)
             {
                 SpanObject(healthyCell);
             }
 
-            else if(_currentClipIndex == 3)
+            else if(currentClipIndex == 3)
             {
                 DestroySpawnedObj();
                 SpanObject(cancerCell);
             }
 
-            audioSource.clip = audioClips[_currentClipIndex];
-            audioSource.Play();
-            Invoke("PlayNextClip", audioSource.clip.length);
-            _currentClipIndex++;
+            yield return audioPlayer.PlayAudio(audioClips[currentClipIndex]);
         }
 
-        else
-        {
-            SpanMultipleWIthOffset();
-            Invoke("LoadNextLevel", 5.0f);
-        }
+        SpanMultipleWIthOffset();
+        yield return new WaitForSeconds(5.0f);
+        levelLoader.LoadNextScene();
     }
 
     private void SpanObject(GameObject objToSpawn)
@@ -90,10 +83,5 @@ public class TutorialScript : MonoBehaviour
     private void DestroySpawnedObj()
     {
         Destroy(_currentSpawnedObj);
-    }
-
-    private void LoadNextLevel()
-    {
-        levelLoader.LoadNextScene();
     }
 }

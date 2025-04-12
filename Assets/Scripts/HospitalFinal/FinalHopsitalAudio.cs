@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class HopsitalAudioFinal : MonoBehaviour
 {
-    public AudioSource source;
+    public AudioPlayer audioPlayer;
     public AudioClip congrats;
 
 
     void Start()
     {
-        source.PlayOneShot(congrats);
+        StartCoroutine(PlayAudioForScene());
+    }
+
+    private IEnumerator PlayAudioForScene()
+    {
+        yield return audioPlayer.PlayAudio(congrats);
     }
 }

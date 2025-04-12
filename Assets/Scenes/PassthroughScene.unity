@@ -3964,6 +3964,7 @@ GameObject:
   - component: {fileID: 388766626}
   - component: {fileID: 388766625}
   - component: {fileID: 388766628}
+  - component: {fileID: 388766629}
   - component: {fileID: 388766627}
   m_Layer: 0
   m_Name: Audio
@@ -4095,9 +4096,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0821f9aede204b1f92f04cc035868ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 388766625}
+  audioPlayer: {fileID: 388766629}
   roomEntryClip: {fileID: 8300000, guid: 4b5594bf8e22b4e5b8b677a60964ca67, type: 3}
-  wbcClip: {fileID: 8300000, guid: 4e0902d1994494a90908cb882f8fc635, type: 3}
+  pressButtonToContinueClip: {fileID: 8300000, guid: 4e0902d1994494a90908cb882f8fc635,
+    type: 3}
   goToNextLevelButton: -1
   levelLoader: {fileID: 388766628}
 --- !u!114 &388766628
@@ -4112,6 +4114,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a81e00f9ac46348b965ebcbc68eb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &388766629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388766624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0da1bff9e0bc2c64984041c8c503603c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 388766625}
 --- !u!1 &388771094
 GameObject:
   m_ObjectHideFlags: 0

@@ -6124,6 +6124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 611192400}
   - component: {fileID: 611192399}
+  - component: {fileID: 611192401}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -6242,6 +6243,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &611192401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611192398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0da1bff9e0bc2c64984041c8c503603c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 611192399}
 --- !u!1 &620582709
 GameObject:
   m_ObjectHideFlags: 0
@@ -19280,12 +19294,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66a24e385ed5aca4192dda2e331d2372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioPlayer: {fileID: 611192401}
   levelLoader: {fileID: 1781743526}
   cancerCell: {fileID: 6606163906860717449, guid: 9b35f99df6cf7924a8aa2d90d5fa11eb,
     type: 3}
   healthyCell: {fileID: 7844583245016644718, guid: 42946e6c9a5558b4cb6b4bc335cfcc41,
     type: 3}
-  audioSource: {fileID: 611192399}
   audioClips:
   - {fileID: 8300000, guid: ec85b4aa0692e4dbc914e649ec8b1198, type: 3}
   - {fileID: 8300000, guid: 0d55f76b47ef4ab4998ff6e879e5196f, type: 3}

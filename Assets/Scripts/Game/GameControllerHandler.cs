@@ -5,7 +5,7 @@ using UnityEngine;
 public class RayScript : MonoBehaviour
 {
     public OVRInput.RawButton shootingButton;
-    public AudioSource source;
+    public AudioPlayer audioPlayer;
     public LineRenderer linePrefab;
     public GameObject laserImpactPrefab;
     public Transform shootingPoint;
@@ -49,9 +49,9 @@ public class RayScript : MonoBehaviour
         channel.Preempt(hapticClip);
     }
 
-     public void FireProjectile()
+    public void FireProjectile()
     {   
-        source.PlayOneShot(shootingAudioClip);
+        audioPlayer.PlayOneShot(shootingAudioClip);
 
         Ray ray = new Ray(shootingPoint.position, shootingPoint.forward);
         bool hitTarget = Physics.Raycast(ray, out RaycastHit hit, maxLineDistance, layerMask);
