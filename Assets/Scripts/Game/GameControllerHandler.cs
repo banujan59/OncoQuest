@@ -19,7 +19,10 @@ public class RayScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(OVRInput.GetDown(shootingButton))
+        bool isControllerInput = (OVRInput.GetConnectedControllers() & OVRInput.Controller.RTouch) == OVRInput.Controller.RTouch ||
+        (OVRInput.GetConnectedControllers() & OVRInput.Controller.LTouch) == OVRInput.Controller.LTouch;
+
+        if(isControllerInput && OVRInput.GetDown(shootingButton))
         {
             FireProjectile();
 
