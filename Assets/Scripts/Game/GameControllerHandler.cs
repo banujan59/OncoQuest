@@ -51,6 +51,9 @@ public class RayScript : MonoBehaviour
 
     public void FireProjectile()
     {   
+        if(audioPlayer == null) // Do not allow shooting if we can't make a sound!
+            return;
+
         audioPlayer.PlayOneShot(shootingAudioClip);
 
         Ray ray = new Ray(shootingPoint.position, shootingPoint.forward);

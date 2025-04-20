@@ -1198,7 +1198,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 306534971}
+  - {fileID: 1187304731}
   m_Father: {fileID: 734098286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &106542289
@@ -1213,16 +1213,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aed62bf3ae2456c408f247f96808ce96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_modelOculusTouchQuestAndRiftSLeftController: {fileID: 306534972}
-  m_modelOculusTouchQuestAndRiftSRightController: {fileID: 306534972}
-  m_modelOculusTouchRiftLeftController: {fileID: 306534972}
-  m_modelOculusTouchRiftRightController: {fileID: 306534972}
-  m_modelOculusTouchQuest2LeftController: {fileID: 306534972}
-  m_modelOculusTouchQuest2RightController: {fileID: 306534972}
-  m_modelMetaTouchProLeftController: {fileID: 306534972}
-  m_modelMetaTouchProRightController: {fileID: 306534972}
-  m_modelMetaTouchPlusLeftController: {fileID: 306534972}
-  m_modelMetaTouchPlusRightController: {fileID: 306534972}
+  m_modelOculusTouchQuestAndRiftSLeftController: {fileID: 1187304732}
+  m_modelOculusTouchQuestAndRiftSRightController: {fileID: 1187304732}
+  m_modelOculusTouchRiftLeftController: {fileID: 1187304732}
+  m_modelOculusTouchRiftRightController: {fileID: 1187304732}
+  m_modelOculusTouchQuest2LeftController: {fileID: 1187304732}
+  m_modelOculusTouchQuest2RightController: {fileID: 1187304732}
+  m_modelMetaTouchProLeftController: {fileID: 1187304732}
+  m_modelMetaTouchProRightController: {fileID: 1187304732}
+  m_modelMetaTouchPlusLeftController: {fileID: 1187304732}
+  m_modelMetaTouchPlusRightController: {fileID: 1187304732}
   m_controller: 2
   m_showState: 1
   showWhenHandsArePoweredByNaturalControllerPoses: 0
@@ -2557,101 +2557,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 843606666}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &306534970
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 106542288}
-    m_Modifications:
-    - target: {fileID: 4726041086164099371, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: audioPlayer
-      value: 
-      objectReference: {fileID: 1736809258}
-    - target: {fileID: 4726041086164099371, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: gameManager
-      value: 
-      objectReference: {fileID: 1877119778}
-    - target: {fileID: 4726041086164099371, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: shootingButton
-      value: 201326593
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6768984857521056404, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: m_Name
-      value: RightAtomRayGun
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a19d53af7c782154e92f5f42f79937ba, type: 3}
---- !u!4 &306534971 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
-    type: 3}
-  m_PrefabInstance: {fileID: 306534970}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &306534972 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6768984857521056404, guid: a19d53af7c782154e92f5f42f79937ba,
-    type: 3}
-  m_PrefabInstance: {fileID: 306534970}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &307214363
 GameObject:
   m_ObjectHideFlags: 0
@@ -4741,7 +4646,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1516234458}
+  - {fileID: 803405503}
   m_Father: {fileID: 607772322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &694361403
@@ -4756,16 +4661,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aed62bf3ae2456c408f247f96808ce96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_modelOculusTouchQuestAndRiftSLeftController: {fileID: 1516234459}
-  m_modelOculusTouchQuestAndRiftSRightController: {fileID: 1516234459}
-  m_modelOculusTouchRiftLeftController: {fileID: 1516234459}
-  m_modelOculusTouchRiftRightController: {fileID: 1516234459}
-  m_modelOculusTouchQuest2LeftController: {fileID: 1516234459}
-  m_modelOculusTouchQuest2RightController: {fileID: 1516234459}
-  m_modelMetaTouchProLeftController: {fileID: 1516234459}
-  m_modelMetaTouchProRightController: {fileID: 1516234459}
-  m_modelMetaTouchPlusLeftController: {fileID: 1516234459}
-  m_modelMetaTouchPlusRightController: {fileID: 1516234459}
+  m_modelOculusTouchQuestAndRiftSLeftController: {fileID: 803405504}
+  m_modelOculusTouchQuestAndRiftSRightController: {fileID: 803405504}
+  m_modelOculusTouchRiftLeftController: {fileID: 803405504}
+  m_modelOculusTouchRiftRightController: {fileID: 803405504}
+  m_modelOculusTouchQuest2LeftController: {fileID: 803405504}
+  m_modelOculusTouchQuest2RightController: {fileID: 803405504}
+  m_modelMetaTouchProLeftController: {fileID: 803405504}
+  m_modelMetaTouchProRightController: {fileID: 803405504}
+  m_modelMetaTouchPlusLeftController: {fileID: 803405504}
+  m_modelMetaTouchPlusRightController: {fileID: 803405504}
   m_controller: 1
   m_showState: 1
   showWhenHandsArePoweredByNaturalControllerPoses: 0
@@ -5508,6 +5413,101 @@ Transform:
   - {fileID: 2029731105}
   m_Father: {fileID: 1535302783}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &803405502
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 694361402}
+    m_Modifications:
+    - target: {fileID: 4726041086164099371, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: audioPlayer
+      value: 
+      objectReference: {fileID: 1736809258}
+    - target: {fileID: 4726041086164099371, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1877119778}
+    - target: {fileID: 4726041086164099371, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: shootingButton
+      value: 805306624
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9848078
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.17364825
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768984857521056404, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: m_Name
+      value: LeftAtomRayGun
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a19d53af7c782154e92f5f42f79937ba, type: 3}
+--- !u!4 &803405503 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 803405502}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &803405504 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6768984857521056404, guid: a19d53af7c782154e92f5f42f79937ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 803405502}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &821108786
 GameObject:
   m_ObjectHideFlags: 0
@@ -7613,6 +7613,96 @@ Transform:
   m_Children: []
   m_Father: {fileID: 843606666}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1187304730
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 106542288}
+    m_Modifications:
+    - target: {fileID: 4726041086164099371, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: audioPlayer
+      value: 
+      objectReference: {fileID: 1736809258}
+    - target: {fileID: 4726041086164099371, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1877119778}
+    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9848078
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.17364825
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768984857521056404, guid: a19d53af7c782154e92f5f42f79937ba,
+        type: 3}
+      propertyPath: m_Name
+      value: RightAtomRayGun
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a19d53af7c782154e92f5f42f79937ba, type: 3}
+--- !u!4 &1187304731 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 1187304730}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1187304732 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6768984857521056404, guid: a19d53af7c782154e92f5f42f79937ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 1187304730}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1189172152
 GameObject:
   m_ObjectHideFlags: 0
@@ -8631,96 +8721,6 @@ Transform:
   - {fileID: 628428098}
   m_Father: {fileID: 1613314937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1516234457
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 694361402}
-    m_Modifications:
-    - target: {fileID: 4726041086164099371, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: audioPlayer
-      value: 
-      objectReference: {fileID: 1736809258}
-    - target: {fileID: 4726041086164099371, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: gameManager
-      value: 
-      objectReference: {fileID: 1877119778}
-    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6768984857521056404, guid: a19d53af7c782154e92f5f42f79937ba,
-        type: 3}
-      propertyPath: m_Name
-      value: LeftAtomRayGun
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a19d53af7c782154e92f5f42f79937ba, type: 3}
---- !u!4 &1516234458 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6249751025074974766, guid: a19d53af7c782154e92f5f42f79937ba,
-    type: 3}
-  m_PrefabInstance: {fileID: 1516234457}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1516234459 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6768984857521056404, guid: a19d53af7c782154e92f5f42f79937ba,
-    type: 3}
-  m_PrefabInstance: {fileID: 1516234457}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1519066857
 GameObject:
   m_ObjectHideFlags: 0
