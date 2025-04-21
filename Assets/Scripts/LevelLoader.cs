@@ -22,6 +22,17 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadSceneRoutine(targetSceneIdx));
     }
 
+    public void LoadNextSceneWithFadeColor(Color fadeColor)
+    {
+        if(_fadeScreen != null)
+        {
+            var myScript = _fadeScreen.GetComponent<FadeScreen>();
+            myScript.fadeColor = fadeColor;
+        }
+        
+        LoadNextScene();
+    }
+
     private IEnumerator LoadSceneRoutine(int sceneIndex)
     {
         float fadeDuration = 0.0f;

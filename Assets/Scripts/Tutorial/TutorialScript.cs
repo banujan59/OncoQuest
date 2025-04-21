@@ -8,13 +8,16 @@ public class TutorialScript : MonoBehaviour
     public LevelLoader levelLoader;
     public GameObject cancerCell;
     public GameObject healthyCell;
+    public AudioClip[] tutorialClips; 
+
+    public AudioClip pickUpControllerClip;
+    public AudioClip pressButtonToContinueClip;
+    public OVRInput.RawButton goToNextLevelButton;
 
     private Vector3 _spawnCameraPosition;
     private Vector3 _spawnCameraForward;
-
-    private GameObject _currentSpawnedObj;
-
-    public AudioClip[] audioClips; 
+    private List<GameObject> _spawnedObjects = new();
+    private bool _waitForInputFromController = false;
 
     void Start()
     {
@@ -26,9 +29,21 @@ public class TutorialScript : MonoBehaviour
         StartCoroutine(PlayAudioForScene());
     }
 
+    private void Update()
+    {
+        if(!_waitForInputFromController)
+            return;
+
+        bool isControllerInput = (OVRInput.GetConnectedControllers() & OVRInput.Controller.RTouch) == OVRInput.Controller.RTouch ||
+        (OVRInput.GetConnectedControllers() & OVRInput.Controller.LTouch) == OVRInput.Controller.LTouch;
+        
+        if(isControllerInput && OVRInput.GetDown(goToNextLevelButton))
+            levelLoader.LoadNextSceneWithFadeColor(Color.white);
+    }
+
     private IEnumerator PlayAudioForScene()
     {
-        for(int currentClipIndex = 0 ; currentClipIndex < audioClips.Length ; currentClipIndex++)
+        for(int currentClipIndex = 0 ; currentClipIndex < tutorialClips.Length ; currentClipIndex++)
         {
             if(currentClipIndex == 1)
             {
@@ -41,20 +56,25 @@ public class TutorialScript : MonoBehaviour
                 SpanObject(cancerCell);
             }
 
-            yield return audioPlayer.PlayAudio(audioClips[currentClipIndex]);
+            yield return audioPlayer.PlayAudio(tutorialClips[currentClipIndex]);
         }
 
         SpanMultipleWIthOffset();
+
         yield return new WaitForSeconds(5.0f);
-        levelLoader.LoadNextScene();
+        DestroySpawnedObj();
+        yield return audioPlayer.PlayAudio(pickUpControllerClip);
+        _waitForInputFromController = true;
+        yield return audioPlayer.PlayAudioUntilCondition(pressButtonToContinueClip);
     }
 
     private void SpanObject(GameObject objToSpawn)
     {
         const float spawnDistance = 0.5f;
         Vector3 spawnPosition = _spawnCameraPosition + _spawnCameraForward * spawnDistance;
-        _currentSpawnedObj = Instantiate(objToSpawn, spawnPosition, Quaternion.identity);
-        _currentSpawnedObj.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+        GameObject go = Instantiate(objToSpawn, spawnPosition, Quaternion.identity);
+        go.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+        _spawnedObjects.Add(go);
     }
 
     private void SpanMultipleWIthOffset()
@@ -69,6 +89,7 @@ public class TutorialScript : MonoBehaviour
             );
         GameObject go = Instantiate(cancerCell, spawnPosition, Quaternion.identity);
         go.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+        _spawnedObjects.Add(go);
 
         spawnPosition = _spawnCameraPosition + _spawnCameraForward * spawnDistance;
         spawnPosition += new Vector3(
@@ -78,10 +99,16 @@ public class TutorialScript : MonoBehaviour
             );
         go = Instantiate(cancerCell, spawnPosition, Quaternion.identity);
         go.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+        _spawnedObjects.Add(go);
     }
 
     private void DestroySpawnedObj()
     {
-        Destroy(_currentSpawnedObj);
+        foreach(GameObject obj in _spawnedObjects)
+        {
+            Destroy(obj);
+        }
+
+        _spawnedObjects.Clear();
     }
 }
