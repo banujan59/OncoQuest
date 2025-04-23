@@ -11536,7 +11536,7 @@ MonoBehaviour:
     type: 3}
   pressButtonToContinueClip: {fileID: 8300000, guid: 4e0902d1994494a90908cb882f8fc635,
     type: 3}
-  goToNextLevelButton: -1
+  goToNextLevelButton: -62977269
 --- !u!4 &1781743525
 Transform:
   m_ObjectHideFlags: 0
