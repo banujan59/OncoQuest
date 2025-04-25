@@ -6,6 +6,8 @@ TagManager:
   tags:
   - CancerCell
   - HealtyCell
+  - GrababbleCube
+  - FadeScreenPanel
   layers:
   - Default
   - TransparentFX
