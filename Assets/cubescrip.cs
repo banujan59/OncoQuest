@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class cubescrip : MonoBehaviour
@@ -8,24 +7,31 @@ public class cubescrip : MonoBehaviour
     private Material EnterMaterial;
 
     [SerializeField]
-    private GameObject GrababbleCell;
+    private GameObject m_grababbleWC;
 
     [SerializeField]
-    private GameObject SplashObjectPrefab;
+    private GameObject m_grababbleCC;
 
     private Material ogMaterial;
 
-    // Start is called before the first frame update
+    private GameObject m_spawn1 = null;
+    private GameObject m_spawn2 = null;
+
     void Start()
     {
         var cubeRenderer = GetComponent<Renderer>();
         ogMaterial = cubeRenderer.material;
+
+        SpawnCells();
     }
 
-    // Update is called once per frame
     void Update()
     {
-
+        if (m_spawn1 != null && m_spawn2 != null)
+        {
+            if (m_spawn1.IsDestroyed() && m_spawn2.IsDestroyed())
+                SpawnCells();
+        }
     }
 
     void OnTriggerEnter(Collider other)
@@ -33,18 +39,20 @@ public class cubescrip : MonoBehaviour
         var cubeRenderer = GetComponent<Renderer>();
         cubeRenderer.material = EnterMaterial;
 
-        var parentTransform = GrababbleCell.transform;
-        GameObject spawnedObject = Instantiate(SplashObjectPrefab, parentTransform.position, parentTransform.rotation);
-        //spawnedObject.transform.SetParent(parentTransform);
-        spawnedObject.transform.localPosition = new Vector3(0, -0.51f, 0);
-        spawnedObject.transform.localScale = new Vector3(3f, 2.14f, 3f);
-        GrababbleCell.SetActive(false);
+        SpawnCells();
     }
 
     void OnTriggerExit(Collider other)
     {
         var cubeRenderer = GetComponent<Renderer>();
         cubeRenderer.material = ogMaterial;
-        GrababbleCell.SetActive(true);
+    }
+
+    private void SpawnCells()
+    {
+        var spawnPosition = new Vector3(0, 0.4603f, 0.468f);
+        Vector3 spawnOffset = Vector3.zero;
+        m_spawn1 = Instantiate(m_grababbleWC, spawnPosition + spawnOffset, Quaternion.identity);
+        m_spawn2 = Instantiate(m_grababbleCC, spawnPosition + spawnOffset + new Vector3(0.507f, 0, 0), Quaternion.identity);
     }
 }

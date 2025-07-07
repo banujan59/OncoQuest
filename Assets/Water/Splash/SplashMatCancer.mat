@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SplashMat
+  m_Name: SplashMatCancer
   m_Shader: {fileID: -6465566751694194690, guid: 759f700544e79a045b892ae338ba5e74,
     type: 3}
   m_Parent: {fileID: 0}
@@ -154,8 +154,10 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 0
     m_Colors:
-    - Color_b8e9b99e5889460f92aebf9bc0057880: {r: 1, g: 1, b: 1, a: 0}
-    - Color_dec2e6edfde948c1a312273dfe7372d6: {r: 1, g: 1, b: 1, a: 1}
+    - Color_b8e9b99e5889460f92aebf9bc0057880: {r: 0.6784314, g: 0.64705884, b: 0.3607843,
+        a: 1}
+    - Color_dec2e6edfde948c1a312273dfe7372d6: {r: 0.6784314, g: 0.64705884, b: 0.36078432,
+        a: 1}
     - _BaseColor: {r: 0, g: 1, b: 0.13945818, a: 1}
     - _BaseColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}

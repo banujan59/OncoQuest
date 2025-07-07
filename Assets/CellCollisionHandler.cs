@@ -5,13 +5,7 @@ using UnityEngine;
 public class CellCollisionHandler : MonoBehaviour
 {
     [SerializeField]
-    private GameObject m_splashObjectPrefab;
-
-    [SerializeField]
-    private GameObject m_cellPrefab;
-
-    [SerializeField]
-    private GameObject m_parentGo;
+    private GameObject m_splashPrefab;
 
     void OnTriggerEnter(Collider other)
     {
@@ -23,23 +17,22 @@ public class CellCollisionHandler : MonoBehaviour
             current = current.parent;
         }
 
-        Debug.Log("In trigger! Collided with: " + current.gameObject.name);
-        if (current.gameObject == m_parentGo)
+        Debug.Log("collusion with : " + other.gameObject.name);
+
+        //if (current.gameObject == m_cameraRig)
+        //if (current.gameObject.name == "[BuildingBlock] Camera Rig")
+        //if (current.gameObject == m_cameraRig)
+        if (current.gameObject.name == "[BuildingBlock] Camera Rig")
             return;
 
+        Vector3 bottomOfThisObject = new Vector3(
+            transform.position.x,
+            GetComponent<Collider>().bounds.min.y,
+            transform.position.z
+        );
 
-        // Stop all movement and rotation
-        var rb = GetComponent<Rigidbody>();
-        rb.velocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
-        rb.constraints = RigidbodyConstraints.FreezeAll; // Optionally, freeze the object completely
-
-        var otherTransform = other.gameObject.transform;
-        GameObject spawnedObject = Instantiate(m_splashObjectPrefab, otherTransform.position, otherTransform.rotation);
-        spawnedObject.transform.SetParent(transform);
-        spawnedObject.transform.localPosition = new Vector3(0, -0.51f, 0);
-        spawnedObject.transform.localScale = new Vector3(3f, 2.14f, 3f);
-
-        m_cellPrefab.SetActive(false);
+        Vector3 contactPoint = other.ClosestPoint(bottomOfThisObject);
+        Instantiate(m_splashPrefab, contactPoint, Quaternion.identity);
+        Destroy(gameObject);
     }
 }

@@ -6,17 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Hospital.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
-    path: Assets/Scenes/Tutorial.unity
-    guid: 196359ba00ef33445bb36c4e13c2fd46
-  - enabled: 1
-    path: Assets/Scenes/GameRoom.unity
-    guid: 9980423f2a20c244896a74ec4af05f23
-  - enabled: 1
-    path: Assets/Scenes/HospitalFinal.unity
-    guid: f180ddcf2317682439842c8991772128
+    path: Assets/Scenes/Test.unity
+    guid: ac90ba5e3457fe94d8feb1f7e9f42896
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 8435ca58f4d0f424e92a18d25a855d93,
       type: 2}

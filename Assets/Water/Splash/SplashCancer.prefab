@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1355109540437517764}
@@ -4916,8 +4916,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.1, z: 0}
-  m_LocalScale: {x: 0.6626027, y: 0.9287174, z: 0.6626027}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.10000001, y: 0.14016204, z: 0.10000001}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1355109540437517764}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9732,7 +9732,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: db63f633550f32a47af1223717fbf447, type: 2}
+  - {fileID: 2100000, guid: e056c077728e54c4687b601399eac2cc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9812,9 +9812,9 @@ Transform:
   m_GameObject: {fileID: 4596888867162352016}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.01, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1355109540437517764}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14629,7 +14629,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2a2ea4b3f298fec449af9e1fd90ba34b, type: 2}
+  - {fileID: 2100000, guid: 9f9c9e10a6681714bad10ca6425d28f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14709,9 +14709,9 @@ Transform:
   m_GameObject: {fileID: 6137814612621587107}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.01, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1355109540437517764}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19526,7 +19526,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2a2ea4b3f298fec449af9e1fd90ba34b, type: 2}
+  - {fileID: 2100000, guid: 9f9c9e10a6681714bad10ca6425d28f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19596,7 +19596,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6541047516270779814
 Transform:
   m_ObjectHideFlags: 0
@@ -24481,7 +24481,7 @@ GameObject:
   - component: {fileID: 2944961993688969422}
   - component: {fileID: 6158695464145843301}
   m_Layer: 0
-  m_Name: SplashWC
+  m_Name: SplashCancer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24496,9 +24496,9 @@ Transform:
   m_GameObject: {fileID: 7051161264409095752}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.81, y: 0, z: 0.02}
-  m_LocalScale: {x: 1.5092, y: 1.0767539, z: 1.5092}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.35673004, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2953121969559293977}
   - {fileID: 6541047516270779814}
@@ -29309,7 +29309,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3298ea074be40674ead5daf5bee4f289, type: 2}
+  - {fileID: 2100000, guid: 5f6426fe076b71440b2e3a737341a770, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -64319,6 +64319,7 @@ GameObject:
   - component: {fileID: 7514079131456843441}
   - component: {fileID: 8696478471440276285}
   - component: {fileID: 8388532746590251557}
+  - component: {fileID: 589298010901258092}
   m_Layer: 0
   m_Name: Grabable CWBC
   m_TagString: Untagged
@@ -64336,7 +64337,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.2, z: 0.5}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 542375793467010823}
@@ -64356,7 +64357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 7358e191-33b7-43ca-b066-b2f00531ac66
-  instanceId: 1b5fef4b-cf06-48a0-a1d5-6ce03ae8358a
+  instanceId: b9d5d156-7523-4fef-9736-14956c8a9490
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -64426,7 +64427,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -64459,6 +64460,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &589298010901258092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6606163906860717449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0e131eb106aedb4a9e48ec44f832dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_splashPrefab: {fileID: 7051161264409095752, guid: 9471402f91b951c479710c0f41ed2d8f,
+    type: 3}
+  m_cameraRig: {fileID: 0}
 --- !u!1 &9079475634753434866
 GameObject:
   m_ObjectHideFlags: 0
@@ -64508,7 +64524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: a706a223-f5e0-4caf-b438-c684c0b1342f
+  instanceId: f2218f9c-dbdf-47ed-af2f-c7fa7e20f9cf
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8
